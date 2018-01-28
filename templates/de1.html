@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Test</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">测量小程序</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">断面</a></li>
+            <li><a href="#about">控制</a></li>
+            <li><a href="#contact">帮助</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="starter-template">
+        <h1>这是一个测绘网站。</h1>
+        <p class="lead">我们将在这个网站添加一些常用的测量计算功能。<br> 我们将在之后逐步添加功能程序。</p>
+      </div>
+		    <form method="post" action="/calculate/" enctype="multipart/form-data">
+			<p class="lead">以下是功能测试：</p>
+      		{% csrf_token %}
+      		<input type="file" name="myfile">
+      		<input type="submit" value="进行计算">
+      	</form>
+    </div><!-- /.container -->
+
+
+  </body>
+</html>

@@ -1,0 +1,229 @@
+mysql>create database testdata
+    -> ;
+Query OK, 1 row affected (0.00 sec)
+
+mysql>show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| testdata           |
++--------------------+
+5 rows in set (0.04 sec)
+
+mysql>show create database testdata
+    -> ;
++----------+---------------------------------------------------------------------+
+| Database | Create Database                                                     |
++----------+---------------------------------------------------------------------+
+| testdata | CREATE DATABASE `testdata` /*!40100 DEFAULT CHARACTER SET latin1 */ |
++----------+---------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql>alter database tesedata default character set utf8
+    -> ;
+ERROR 1 (HY000): Can't create/write to file './tesedata/db.opt' (Errcode: 2 - No such file or directory)
+mysql>alter database testdata default character set utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql>show create database testdata
+    -> ;
++----------+-------------------------------------------------------------------+
+| Database | Create Database                                                   |
++----------+-------------------------------------------------------------------+
+| testdata | CREATE DATABASE `testdata` /*!40100 DEFAULT CHARACTER SET utf8 */ |
++----------+-------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql>use testdata;
+Database changed
+mysql>select testbase
+    -> ;
+ERROR 1054 (42S22): Unknown column 'testbase' in 'field list'
+mysql>select testdata
+    -> ;
+ERROR 1054 (42S22): Unknown column 'testdata' in 'field list'
+mysql>select database()
+    -> ;
++------------+
+| database() |
++------------+
+| testdata   |
++------------+
+1 row in set (0.00 sec)
+
+mysql>SELECT DATABASE()
+    -> ;
++------------+
+| DATABASE() |
++------------+
+| testdata   |
++------------+
+1 row in set (0.00 sec)
+
+mysql>CREATE DATABASE IF NOT EXISTS test1 DEFAULT CHARACTER SET 'UTF8';
+Query OK, 1 row affected (0.00 sec)
+
+mysql>
+mysql>USE test1;
+Database changed
+mysql>
+mysql>CREATE TABLE IF NOT EXITS 'user'(
+    -> id SMALLINT,
+    -> username VARCHAR(20),
+    -> age TINYINT,
+    -> sex ENUM('MALE', 'FEMALE', 'SECTERY'),
+    -> email VARCHAR(50),
+    -> addr VARCHAR(200),
+    -> birth YEAR,
+    -> salary FLOAT(8,2),
+    -> tel INT,
+    -> married TINYINT(1) COMMENT '0UNMARRIED'
+    -> )CHARSET=UTF8;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'EXITS 'user'(
+id SMALLINT,
+username VARCHAR(20),
+age TINYINT,
+sex ENUM('MALE', '' at line 1
+mysql>SELECT DATABASE()
+    -> ;
++------------+
+| DATABASE() |
++------------+
+| test1      |
++------------+
+1 row in set (0.00 sec)
+
+mysql>CREATE TABLE IF NOT EXITS 'user'(
+    -> id SMALLINT,
+    -> username VARCHAR(20),
+    -> age TINYINT,
+    -> sex ENUM('MALE', 'FEMALE', 'SECTERY'),
+    -> email VARCHAR(50),
+    -> addr VARCHAR(200),
+    -> birth YEAR,
+    -> salary FLOAT(8,2),
+    -> tel INT,
+    -> married TINYINT(1) COMMENT '0UNMARRIED'
+    -> )CHARSET=UTF8;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'EXITS 'user'(
+id SMALLINT,
+username VARCHAR(20),
+age TINYINT,
+sex ENUM('MALE', '' at line 1
+mysql>CREATE TABLE IF NOT EXITS 'user'(
+    -> id SMALLINT,
+    -> username VARCHAR(20),
+    -> age TINYINT,
+    -> sex ENUM('MALE', 'FEMALE', 'SECTERY'),
+    -> email VARCHAR(50),
+    -> addr VARCHAR(200),
+    -> birth YEAR,
+    -> salary FLOAT(8,2),
+    -> tel INT,
+    -> married TINYINT(1) COMMENT '0MARRI'
+    -> )CHARSET=UTF8;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'EXITS 'user'(
+id SMALLINT,
+username VARCHAR(20),
+age TINYINT,
+sex ENUM('MALE', '' at line 1
+mysql>CREATE TABLE IF NOT EXISTS 'user'(
+    -> id SMALLINT,
+    -> username VARCHAR(20),
+    -> age TINYINT,
+    -> sex ENUM('MALE', 'FEMALE', 'SECTERY'),
+    -> email VARCHAR(50),
+    -> addr VARCHAR(200),
+    -> birth YEAR,
+    -> salary FLOAT(8,2),
+    -> tel INT,
+    -> married TINYINT(1) COMMENT '0MARRI'
+    -> )CHARSET=UTF8;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''user'(
+id SMALLINT,
+username VARCHAR(20),
+age TINYINT,
+sex ENUM('MALE', 'FEMALE' at line 1
+mysql>REATE TABLE IF NOT EXISTS 'user'(
+    -> id SMALLINT,
+    -> username VARCHAR(20),
+    -> age TINYINT,
+    -> sex ENUM('MALE','FEMALE','SECTERY'),
+    -> email VARCHAR(50),
+    -> addr VARCHAR(200),
+    -> birth YEAR,
+    -> salary FLOAT(8,2),
+    -> tel INT,
+    -> married TINYINT(1) COMMENT '0MARRI'
+    -> )CHARSET=UTF8;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'REATE TABLE IF NOT EXISTS 'user'(
+id SMALLINT,
+username VARCHAR(20),
+age TINYINT' at line 1
+mysql>
+mysql>CREATE TABLE IF NOT EXISTS 'user'(
+    -> id SMALLINT,
+    -> username VARCHAR(20),
+    -> age TINYINT,
+    -> sex ENUM('MALE','FEMALE','SECTERY'),
+    -> email VARCHAR(50),
+    -> addr VARCHAR(200),
+    -> birth YEAR,
+    -> salary FLOAT(8,2),
+    -> tel INT,
+    -> married TINYINT(1) COMMENT '0MARRI'
+    -> )CHARSET=UTF8;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''user'(
+id SMALLINT,
+username VARCHAR(20),
+age TINYINT,
+sex ENUM('MALE','FEMALE'' at line 1
+mysql>
+mysql>CREATE TABLE IF NOT EXISTS 'user'(
+    -> id SMALLINT,
+    -> username VARCHAR(20),
+    -> age TINYINT,
+    -> sex ENUM('MALE','FEMALE'),
+    -> email VARCHAR(50),
+    -> addr VARCHAR(200),
+    -> birth YEAR,
+    -> salary FLOAT(8,2),
+    -> tel INT,
+    -> married TINYINT(1) COMMENT '0MARRI'
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''user'(
+id SMALLINT,
+username VARCHAR(20),
+age TINYINT,
+sex ENUM('MALE','FEMALE'' at line 1
+mysql>show tables
+    -> ;
+Empty set (0.00 sec)
+
+mysql>CREATE TABLE IF NOT EXISTS 'user'(
+    -> id SMALLINT,
+    -> username VARCHAR(20),
+    -> AGE TINYINT
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''user'(
+id SMALLINT,
+username VARCHAR(20),
+AGE TINYINT
+)' at line 1
+mysql>CREATE TABLE user
+    -> ;
+ERROR 1113 (42000): A table must have at least 1 column
+mysql>CREATE TABLE IF NOT EXISTS 
+    -> 'user'(
+    -> id SMALLINT
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''user'(
+id SMALLINT
+)' at line 2
+mysql>^C
+mysql>exit

@@ -1,0 +1,12 @@
+<html>
+<body>
+	<h1>Website</h1>
+	<div>
+		<form method="post" action="/uploadFile_result/" enctype="multipart/form-data">
+		{% csrf_token %}
+		<input type="file" name="myfile">
+		<input type="submit" value="计算">
+		</form>
+	</div>
+</body>
+</html>
