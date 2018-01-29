@@ -1,0 +1,104 @@
+[28/Jan/2018 12:31:08] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 12:31:10] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 12:31:17] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 12:35:26] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 12:35:27] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 12:35:29] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 13:06:52] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 13:06:52] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[28/Jan/2018 13:06:56] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 13:07:08] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 13:28:32] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 13:28:32] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[28/Jan/2018 13:46:46] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 13:46:46] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py", line 139, in handle
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[28/Jan/2018 14:23:32] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 14:23:32] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[28/Jan/2018 14:35:10] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 14:35:40] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 14:35:53] "POST /calculate/ HTTP/1.1" 200 180255
+[28/Jan/2018 15:48:55] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 15:48:55] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[28/Jan/2018 15:48:56] "GET /favicon.ico HTTP/1.1" 404 2288
+[28/Jan/2018 15:48:58] "GET / HTTP/1.1" 200 1849
+Forbidden (CSRF token missing or incorrect.): /calculate/
+[28/Jan/2018 15:50:02] "POST /calculate/ HTTP/1.1" 403 2513
+Internal Server Error: /calculate/
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 139, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view hello.views.uploadFile_result didn't return an HttpResponse object. It returned None instead.
+[28/Jan/2018 15:50:07] "GET /calculate/ HTTP/1.1" 500 54955
+[28/Jan/2018 15:50:20] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 15:51:39] "POST /calculate/ HTTP/1.1" 200 180255
+[28/Jan/2018 15:51:52] "POST /calculate/ HTTP/1.1" 200 8749807
+[28/Jan/2018 15:52:19] "GET / HTTP/1.1" 200 1849
+Not Found: /favicon.ico
+[28/Jan/2018 15:52:34] "GET /favicon.ico HTTP/1.1" 404 2288
+[28/Jan/2018 15:52:43] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 15:52:45] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 15:54:06] "POST /calculate/ HTTP/1.1" 200 7194614
+[28/Jan/2018 15:54:37] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 15:54:39] "GET / HTTP/1.1" 200 1849
+[28/Jan/2018 17:21:06] "GET / HTTP/1.1" 200 1849
+[29/Jan/2018 00:10:44] "GET / HTTP/1.1" 200 1849
+[29/Jan/2018 00:10:44] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[29/Jan/2018 00:10:45] "GET /favicon.ico HTTP/1.1" 404 2288
+[29/Jan/2018 00:30:00] "GET / HTTP/1.1" 200 1849
+[29/Jan/2018 01:26:08] "GET / HTTP/1.1" 200 1849
+[29/Jan/2018 01:26:45] "GET / HTTP/1.1" 200 1849
+Not Found: /favicon.ico
+[29/Jan/2018 01:26:45] "GET /favicon.ico HTTP/1.1" 404 2288
+[29/Jan/2018 01:45:47] "GET / HTTP/1.1" 200 1849
+[29/Jan/2018 01:45:47] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[29/Jan/2018 01:45:58] "GET / HTTP/1.1" 200 1849
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py", line 139, in handle
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py", line 139, in handle
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[29/Jan/2018 05:19:10] "GET / HTTP/1.1" 200 1849
+[29/Jan/2018 05:19:10] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[29/Jan/2018 05:19:10] "GET /favicon.ico HTTP/1.1" 404 2288
+[29/Jan/2018 07:23:42] "GET / HTTP/1.1" 200 1849
+[29/Jan/2018 07:23:42] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[29/Jan/2018 07:23:42] "GET /favicon.ico HTTP/1.1" 404 2288
+[29/Jan/2018 07:23:46] "GET / HTTP/1.1" 200 1849
+[29/Jan/2018 09:25:42] "GET / HTTP/1.1" 200 1849
